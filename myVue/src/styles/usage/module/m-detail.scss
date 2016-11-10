@@ -1,0 +1,21 @@
+.m-detail {
+  @extend %header;
+  @include flexbox();
+  @include flex-direction(column);
+  .title {
+    color: #fff;
+    font-size: .16rem;
+    @include ellipsis();
+  }
+  #content {
+    @include flex();
+    width: 100%;
+    overflow: hidden;
+     > div {
+       padding: .1rem;
+       img {
+         width: 100%;
+       }
+     }
+  }
+}
